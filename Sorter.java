@@ -110,6 +110,16 @@ merge(int[] counter1, int [] counter2)
 {
   int[] sortedArray = new int[counter1.length + counter2.length];
   //get number of values for each index from counter1 & counter2
+  for(int index = 0; index < counter1.length; index++)
+  {
+    int total = counter1[index] + counter2[index];
+    int track = track + total;
+    for(int p = track - valueNum; p < track; p++)
+    {
+      sortedArray[p] = index;
+      System.out.println(sortedArray[p]);
+    }
+  }
   //add them together
   //iterate through sorted Array similarly to the run() function
   //repeat for all indexes in the counter1
